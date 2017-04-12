@@ -1,0 +1,100 @@
+{
+  "$jason": {
+    "head": {
+      "title": "Zeltgespräche",
+      "description": "Zeigt Fragen für die Zeltgespräche des Teencamps",
+      "data": {
+        "fragen": [
+          {
+            "name": "Wie geht es Dir?"
+          },
+          {
+            "name": "Wo ist Dir Gott schon mal begegnet?"
+          },
+          {
+            "name": "Wo würdest du gerne einmal hinfahren?"
+          },
+          {
+            "name": "Wieso gehst du hier her?"
+          },
+          {
+            "name": "Kannst du schwimmen?"
+          }
+        ]
+      },
+      "templates": {
+        "body": {
+          "header": {
+            "title": "Zeltgespräche"
+          },
+          "sections": [
+            {
+              "items": [
+                {
+                  "type": "label",
+                  "text": " {{ fragen[Math.floor(Math.random() * fragen.length)].name }} ",
+                  "style": {
+                    "size": "30"
+                  }
+                }
+              ]
+            }
+          ],
+          "layers": [
+            {
+              "type": "label",
+              "text": "Nächste Frage",
+              "action": {
+                "type": "$reload"
+              },
+              "style": {
+                "top": "100%-89",
+                "left": "0",
+                "width": "100%",
+                "align": "center",
+                "background": "#580e0e",
+                "color": "#ffffff",
+                "padding": "10"
+              }
+            }
+          ],
+          "footer": {
+            "tabs": {
+              "style": {
+                "background": "rgba(255,255,255,0.8)",
+                "color:disabled": "#cecece",
+                "color": "#580e0e"
+              },
+              "items": [
+                {
+                  "image": "https://raw.githubusercontent.com/Jasonette/Twitter-UI-example/master/images/home.png",
+                  "text": "Zeltgespräche",
+                  "style": {
+                    "height": "21"
+                  },
+                  "url": "https://www.jasonbase.com/things/Znd4.json"
+                },
+                {
+                  "image": "https://raw.githubusercontent.com/Jasonette/Twitter-UI-example/master/images/notifications.png",
+                  "text": "Karte",
+                  "style": {
+                    "height": "21"
+                  },
+                  "url": "https://www.jasonbase.com/things/6dAq.json"
+                },
+                {
+                  "image": "https://raw.githubusercontent.com/Jasonette/Twitter-UI-example/master/images/moments.png",
+                  "text": "Moments",
+                  "style": {
+                    "height": "21"
+                  },
+                  "url": "https://raw.githubusercontent.com/Jasonette/Twitter-UI-example/master/moments.json"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
